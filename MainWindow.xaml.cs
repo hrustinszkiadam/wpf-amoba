@@ -58,7 +58,10 @@ namespace amoba
 			{
 				for (int col = 0; col < BOARD_SIZE; col++)
 				{
-					Button button = new Button();
+					Button button = new Button()
+					{
+						FontSize = 40,
+					};
 					button.Click += GameButton;
 
 					GameBoard.Children.Add(button);
