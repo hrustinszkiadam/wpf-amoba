@@ -88,19 +88,19 @@ namespace amoba
 			pressed.Content = currentTurn == PlayersType.X ? "X" : "O";
 			pressed.Foreground = currentTurn == PlayersType.X ? Brushes.Blue : Brushes.Red;
 
-			if (CheckDraw())
+			if (CheckWin())
 			{
-				MessageBox.Show("Döntetlen!");
+				MessageBox.Show($"{currentTurn} nyert!");
+				if (currentTurn == PlayersType.X) scoreOfX++;
+				else scoreOfO++;
+
 				Start();
 				return;
 			}
 
-			if (CheckWin())
+			if (CheckDraw())
 			{
-				MessageBox.Show($"{currentTurn} nyert!");
-				if(currentTurn == PlayersType.X) scoreOfX++;
-				else scoreOfO++;
-
+				MessageBox.Show("Döntetlen!");
 				Start();
 				return;
 			}
