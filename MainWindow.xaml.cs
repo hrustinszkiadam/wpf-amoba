@@ -18,7 +18,7 @@ namespace amoba
 
 	public partial class MainWindow : Window
     {
-        public const int BOARD_SIZE = 3;
+        public const int BOARD_SIZE = 10;
 
         private PlayersType currentTurn = PlayersType.X;
         private int scoreOfX = 0;
@@ -54,6 +54,8 @@ namespace amoba
 		private void GenerateBoard()
 		{
 			GameBoard.Children.Clear();
+			GameBoard.Rows = BOARD_SIZE;
+			GameBoard.Columns = BOARD_SIZE;
 			for (int row = 0; row < BOARD_SIZE; row++)
 			{
 				for (int col = 0; col < BOARD_SIZE; col++)

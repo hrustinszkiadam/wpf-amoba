@@ -22,7 +22,7 @@
                 <TextBlock Name="state" Text="X Jön" HorizontalAlignment="Center" />
             </StackPanel>
             <Button Content="Új Játék" DockPanel.Dock="Bottom" Height="40" Margin="20,10" Click="NewGame" />
-            <UniformGrid Name="GameBoard" Rows="3" Columns="3" Height="200" Width="200">
+            <UniformGrid Name="GameBoard" Height="200" Width="200">
             </UniformGrid>
         </DockPanel>
     </Viewbox>
